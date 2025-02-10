@@ -8,7 +8,7 @@ import robotImg from './assets/robot.png';
 import { appSt } from './style.css';
 
 const chatBotLink =
-  'alfabank://configurable_chat?sourceChannelId=AI1_CHAT&navigationTitle=%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%90%D1%81%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BD%D1%82&attachmentsPickerEnabled=false&suggestionsEnabled=false&welcomeMessageEnabled=false&voiceMessageEnabled=false&quotesEnabled=false';
+  'alfabank://configurable_chat?sourceChannelId=AI2_CHAT&navigationTitle=%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%90%D1%81%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BD%D1%82&attachmentsPickerEnabled=false&suggestionsEnabled=false&welcomeMessageEnabled=false&voiceMessageEnabled=false&quotesEnabled=false';
 
 export const App = () => {
   const [showBs, setShowBs] = useState(false);
@@ -31,22 +31,22 @@ export const App = () => {
             <Typography.Text view="primary-medium">Здравствуйте!</Typography.Text>
           </div>
           <div className={appSt.chatBubble({ position: 'middle' })}>
-            <Typography.Text view="primary-medium">Я ваш виртуальный турагент.</Typography.Text>
+            <Typography.Text view="primary-medium">Я ваш личный виртуальный консьерж.</Typography.Text>
           </div>
           <div className={appSt.chatBubble({ position: 'bottom' })}>
             <Typography.Text view="primary-medium">
-              Посоветую популярные места, подберу отель, подскажу, где пообедать или интересно провести время и многое
-              другое.
+              Задавайте вопросы про путешествия и рестораны: посоветую интересные места, подскажу, какой отель выбрать и
+              подберу ресторан на ваш вкус.
             </Typography.Text>
             <div style={{ marginTop: '1rem' }}>
               <Typography.Text tag="p" defaultMargins={false} view="primary-small" color="secondary">
                 Примеры вопросов:
               </Typography.Text>
               <Typography.Text tag="p" defaultMargins={false} view="primary-medium">
-                Сколько часов лететь до Калининграда?
+                Что посмотреть в Казани?
               </Typography.Text>
               <Typography.Text tag="p" defaultMargins={false} view="primary-medium">
-                Подскажи, что посмотреть в Казани?
+                Предложи варианты спа-отелей в Карелии.
               </Typography.Text>
               <Typography.Text tag="p" defaultMargins={false} view="primary-medium">
                 Посоветуй, где поужинать в Питере?
@@ -63,7 +63,7 @@ export const App = () => {
           block
           view="primary"
           onClick={() => {
-            window.gtag('event', 'next_AI_Travel_var2');
+            window.gtag('event', 'next_4331_var2');
             setShowBs(true);
           }}
         >
@@ -73,7 +73,7 @@ export const App = () => {
           Продолжая, вы соглашаетесь с{' '}
           <span
             onClick={() => {
-              window.gtag('event', 'rules_AI_Travel_var2');
+              window.gtag('event', 'rules_4331_var2');
               setShowBsRules(true);
             }}
             style={{ textDecoration: 'underline', color: '#000' }}
@@ -154,7 +154,7 @@ export const App = () => {
             view="primary"
             href={chatBotLink}
             onClick={() => {
-              window.gtag('event', 'agree_AI_Travel_var2');
+              window.gtag('event', 'agree_4331_var2');
             }}
           >
             Понятно, продолжить
